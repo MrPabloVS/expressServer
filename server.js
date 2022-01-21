@@ -3,9 +3,6 @@
 const express = require('express')
 const fs = require("fs")
 
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
-
 const app = express()
 
 const PORT = 8080
@@ -17,30 +14,32 @@ const server = app.listen(PORT, ()=> {
 })
 
 // a) Ruta get '/productos' que devuelva un array con todos los productos disponibles en el servidor
+function getProducts() {
+    
 app.get('/productos', (request, response) => {
     response.send(db)
-})
+})}
 
 // c) Ruta get '/producto/id'
-app.get('/producto/id', (request, response) => {
+function getProductById() {
+
+app.get('/producto/:id', (request, response) => {
     response.send(db.producto.id)
-})
+})}
 
 // b) Ruta post '/producto'
+function postProduct() {
+    
 app.post('/producto', (request, response) => {
-    const body = request.body
-    const { title, img, price} = body
-    let hashId = ""
-    bcrypt.hash(db.length + 1, saltRounds, function(err, hash) {
-        hashId = hash
-    });
-
-    response.send({
-        hashId,
-        title,
-        img,
-        price,
+    // const body = request.body
+    // const { title, img, price} = body
+    let id = db.length + 1
+     response.send({
+        "title": "Producto 2",
+        "id": id,
+        "img": "#",
+        "price": 123
     })
-
-})
+    });
+}
 
