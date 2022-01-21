@@ -1,3 +1,5 @@
+// Incluir un archivo de texto 'productos.json y acceder a los datos persistidos del servidor'
+
 [
     {
         "title": "Producto 1",
