@@ -13,33 +13,33 @@ const server = app.listen(PORT, ()=> {
 
 })
 
-// a) Ruta get '/productos' que devuelva un array con todos los productos disponibles en el servidor
-function getProducts() {
+// // a) Ruta get '/productos' que devuelva un array con todos los productos disponibles en el servidor
+// function getProducts() {
     
-app.get('/productos', (request, response) => {
-    response.send(db)
-})}
+// app.get('/productos', (request, response) => {
+//     response.send(db)
+// })}
 
-// c) Ruta get '/producto/id'
-function getProductById() {
+// // c) Ruta get '/producto/id'
+// function getProductById() {
 
-app.get('/producto/:id', (request, response) => {
-    response.send(db.producto.id)
-})}
+// app.get('/producto/:id', (request, response) => {
+//     response.send(db.producto.id)
+// })}
 
-// b) Ruta post '/producto'
-function postProduct() {
+// // b) Ruta post '/producto'
+// function postProduct() {
     
-app.post('/producto', (request, response) => {
-    // const body = request.body
-    // const { title, img, price} = body
-    let id = db.length + 1
-     response.send({
-        "title": "Producto 2",
-        "id": id,
-        "img": "#",
-        "price": 123
-    })
-    });
-}
+// app.post('/producto', (request, response) => {
+//     // const body = request.body
+//     // const { title, img, price} = body
+//     let id = db.length + 1
+//      response.send({
+//         "title": "Producto 2",
+//         "id": id,
+//         "img": "#",
+//         "price": 123
+//     })
+//     });
+// }
 
