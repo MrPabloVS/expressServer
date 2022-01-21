@@ -13,6 +13,26 @@ const server = app.listen(PORT, ()=> {
 
 })
 
+const {getProducts, getProductById, postProduct} = require('logica.js')
+
+getProducts();
+getProductById();
+postProduct();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // a) Ruta get '/productos' que devuelva un array con todos los productos disponibles en el servidor
 // function getProducts() {
     

@@ -8,21 +8,21 @@ const {getProducts, getProductById, postProduct, app} = require('server.js')
 
 
 // a) Ruta get '/productos' que devuelva un array con todos los productos disponibles en el servidor
-
+function getProducts() {
     
     app.get('/productos', (request, response) => {
         response.send(db)
-    })
+    })}
     
     // c) Ruta get '/producto/id'
-    
+    function getProductById() {
     
     app.get('/producto/:id', (request, response) => {
         response.send(db.producto.id)
-    })
+    })}
     
     // b) Ruta post '/producto'
-    
+    function postProduct() {
         
     app.post('/producto', (request, response) => {
         // const body = request.body
@@ -35,4 +35,4 @@ const {getProducts, getProductById, postProduct, app} = require('server.js')
             "price": 123
         })
         });
-    
+    }
