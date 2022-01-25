@@ -13,11 +13,24 @@ const server = app.listen(PORT, ()=> {
 
 })
 
-const {getProducts, getProductById, postProduct} = require('logica.js')
+app.get('/productos', (request, response) => {
+    response.send(db)
+})
 
-getProducts();
-getProductById();
-postProduct();
+app.get('/producto/:id', (request, response) => {
+    response.send(db.producto.id)
+})
+
+app.post('/producto', (request, response) => {
+    let id = db.length + 1
+     response.send({
+        "title": "Producto 2",
+        "id": id,
+        "img": "#",
+        "price": 123
+    })
+    });
+
 
 
 
